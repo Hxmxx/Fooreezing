@@ -16,7 +16,7 @@ export default function IngredientCard({
   const daysUntilExpiry = Math.ceil((expiryDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
   
   return (
-    <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+    <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow animate-slideUp">
       <div className="flex justify-between items-start">
         <h3 className="text-lg font-semibold">{name}</h3>
         <span className="text-sm bg-gray-100 px-2 py-1 rounded">{category}</span>

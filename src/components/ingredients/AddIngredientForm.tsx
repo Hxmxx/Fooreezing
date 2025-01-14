@@ -3,11 +3,12 @@ import { useState } from 'react'
 
 interface AddIngredientFormProps {
   onClose: () => void
+  suggestedName?: string
 }
 
-export default function AddIngredientForm({ onClose }: AddIngredientFormProps) {
+export default function AddIngredientForm({ onClose, suggestedName }: AddIngredientFormProps) {
   const [formData, setFormData] = useState({
-    name: '',
+    name: suggestedName || '',
     category: 'VEGETABLE',
     expiryDate: '',
     quantity: 1,
